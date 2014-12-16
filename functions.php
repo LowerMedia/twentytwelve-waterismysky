@@ -120,7 +120,7 @@
             'lowermedia-staff-sitelink',
             __( 'Staff Website Link', 'lm_textdomain' ),
             'lm_meta_box_callback',
-            'crew',//$screen
+            'staff',//$screen
             'side',
             'high'
         );
@@ -129,7 +129,7 @@
             'lowermedia-press-link',
             __( 'Press Link', 'lm_textdomain' ),
             'lm_meta_box_callback',
-            'press-article',//$screen
+            'press',//$screen
             'side',
             'high'
         );
@@ -281,15 +281,21 @@
       ;
     }
 
-
-
 /*
 #
 #   ENABLE SHORTCODE IN WIDGETS
 #
 */
-
     add_filter('widget_text', 'do_shortcode');
+/*
+#
+#   CONTACT FORM  FUNCTION
+#   - changing default WordPress email settings
+*/
+    function lowermedia_mail_from($old) { return 'waterismysky@gmail.com'; }
+    add_filter('wp_mail_from', 'lowermedia_mail_from');
+    function lowermedia_mail_from_name($old) { return 'Water Is My Sky'; }
+    add_filter('wp_mail_from_name', 'lowermedia_mail_from_name');
 
 /*
 # SPEED OPTIMIZATIONS
