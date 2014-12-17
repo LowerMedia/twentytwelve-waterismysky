@@ -254,9 +254,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 	#blog_subscription-2 input, 
 	.wp-email-capture-holder label, 
 	.wp-email-capture-holder input {
-		width: 230px;
+		width: 210px;
 		margin: 0 auto;
 		display: block;
+		padding: .428571429rem;
+		text-align: center;
 	}
 
 	.wp-email-capture-holder input[type=submit] {
